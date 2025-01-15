@@ -1,0 +1,98 @@
+<div class="web-view">
+  <div class="header d-flex justify-content-center align-items-center" style="position: relative;">
+    <div class="logo d-flex">
+      <img class="m-2 p-2" src="assets/theme/Coroebus_logo.png" height="100%" alt="">
+    </div>
+  </div>
+  <div class="selectThemeBackground">
+    <div class="selectThemeText d-flex justify-content-center align-items-center">
+      Please select your theme
+    </div>
+  </div>
+  <div class="themeSlider">
+    <div id="carouselExample" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="d-flex"  [ngClass]="{'justify-content-center': userId=='Tata_aia'}">
+            <div class="card mx-5" [style.width]="userId=='Tata_aia'?'30%':'100%'" *ngFor="let item of slides">
+              <div class="d-flex justify-content-center align-items-center">
+                <img src="{{item.img}}" class="themelogo"  alt="...">            
+              </div>
+                <div class="card-body">
+                <h5 class="card-title text-center">{{item.themename}}</h5>
+                <div class="d-flex justify-content-center align-items-center">
+                  <button class="mt-2 Themebtn" (click)="selectedTheme(item.themename)">{{item.button}}</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="userId!='Tata_aia' && this.slides.length>3">
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <div class="arrowbackground">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </div>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <div class="arrowbackground">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </div>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="mobile-view">
+  <div class="header d-flex justify-content-center align-items-center" style="position: relative;">
+    <div class="logo d-flex">
+      <img class="m-2 p-2" src="assets/theme/Coroebus_logo.png" height="100%" alt="">
+    </div>
+  </div>
+  <div class="selectThemeBackground">
+    <div class="selectThemeText d-flex justify-content-center align-items-center">
+      Please select your theme
+    </div>
+  </div>
+  <div class="themeSlider">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item" *ngFor="let item of slides;let i=index"
+        [ngClass]="{'active': i=== 0}">
+          <div class="d-flex">
+            <div class="card w-100 mx-5" >
+              <div class="d-flex justify-content-center align-items-center">
+                <img src="{{item.img}}" class="themelogo"  alt="...">            
+              </div>
+                <div class="card-body">
+                <h5 class="card-title text-center">{{item.themename}}</h5>
+                <div class="d-flex justify-content-center align-items-center">
+                  <button class="mt-2 Themebtn" (click)="selectedTheme(item.themename=='War'?'War1':item.themename)">{{item.button}}</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="userId!='Tata_aia'">
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <div class="arrowbackground">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+     </div>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <div class="arrowbackground">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </div>
+      </button>
+      </div>
+    </div>
+</div>
+</div>

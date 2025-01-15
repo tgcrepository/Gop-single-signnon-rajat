@@ -1,0 +1,842 @@
+::-webkit-scrollbar{
+    width: 2px;
+}
+.mainContainer{
+    background-color: #F8FAFB;
+    
+   height: 100vh;
+}
+
+@media (min-width: 1281px) {
+    .login-pwd {
+        position: fixed !important;
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 1281px),
+only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 1281px),
+only screen and (-o-min-device-pixel-ratio: 1.25/1) and (min-width: 1281px),
+only screen and (min-device-pixel-ratio: 1.25) and (min-width: 1281px),
+only screen and (min-resolution: 200dpi) and (min-width: 1281px),
+only screen and (min-resolution: 1.25dppx) and (min-width: 1281px) {
+    .login-pwd {
+        position: fixed !important;
+    }
+
+
+}
+@media (min-width: 768px) and (max-width:1280px) {
+    .login-pwd {
+        position: fixed !important;
+    }
+    .logo {
+        padding: 60px 85px;
+    }
+
+}
+@media (min-width: 481px) and (max-width: 767px) {
+    .login-pwd {
+        position: fixed !important;
+    }
+
+
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .login-pwd {
+        position: fixed !important;
+    }
+
+    
+}
+
+@media (min-width: 1366px) and (max-width: 1380px) {
+  .logo{
+    padding: 60px 85px;
+  }
+}
+
+// 
+// authentication.scss
+//
+
+
+// authentication home icon
+.home-btn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+}
+
+// auth 2
+
+.auth-logo {
+    .auth-logo-dark {
+        display: display-block;
+        left: 5.2%;
+        right: 81.2%;
+        top: 7.67%;
+        bottom: 86.06%;
+    }
+
+    .auth-logo-light {
+        display: display-none;
+    }
+}
+
+// auth-pass-inputgroup
+.mdi-eye-outline::before {
+  content: "\F06D0";
+}
+.auth-pass-inputgroup {
+    input[type="input"]+.btn .mdi-eye-outline {
+        &:before {
+            content: "\F06D1";
+        }
+    }
+}
+
+// authentication full page
+
+.auth-full-bg {
+    // background-color: rgba($primary, 0.25);
+    display: flex;
+
+    @media (min-width: 1200px) {
+        // height: 100vh;
+    }
+
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+    }
+
+    .bg-overlay {
+        background: url("../../assets/login/login_left.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        width: 601.12px;
+        height: 491px;
+        left: 161px;
+        // top: 174px;
+
+        @media (max-width: 768px) {
+            position: inherit;
+            width: 350px;
+            height: 350px;
+        }
+    }
+}
+
+.auth-full-page-content {
+    display: flex;
+
+    @media (min-width: 1200px) {
+        min-height: 100vh;
+    }
+}
+
+
+
+.login-btn {
+    background: linear-gradient(180.2deg, #2C7B67 0.17%, #1D4B58 202.17%);
+    border-radius: 5px;
+    color: #FFFFFF !important;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.welcome {
+    font-family: 'Inter' !important;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    color: #000000;
+}
+
+.input-bg {
+    background: #FFFFFF;
+    border-radius: 4px;
+}
+
+.forgot-pwd {
+    // font-weight: 400;
+    // font-size: 12px;
+    // line-height: 15px;
+    // /* or 126% */
+    // text-align: center;
+    text-decoration: underline !important;
+    // color: #888888;
+}
+
+.pwd-eye {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+}
+
+.almost-done-text {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #000000;
+}
+
+.verify-btn {
+    background: #E4F8E9;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    color: #000000;
+}
+
+// New design
+
+.br-4 input {
+    border-radius: 5px !important;
+}
+
+.form-signin h1 {
+    line-height: 45px;
+}
+
+.form-signin .form-control {
+    border-color: #fff;
+}
+
+.logo {
+    // position: absolute;
+    // top: 60px;
+    // left: 78px;
+    padding: 60px 85px;
+}
+
+.eclips {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.form-signin {
+    width: 100%;
+    max-width: 500px;
+    // padding: 110px 15px;
+    margin: auto;
+}
+
+.form-signin .checkbox {
+    font-weight: 400;
+}
+
+.form-signin label {
+    color:#979797;
+}
+
+.forgot-password {
+    text-align: end;
+    margin: 40px 0 145px 0;
+}
+
+.forgot-password a {
+    color: #888;
+}
+
+.form-signin .form-floating:focus-within {
+    z-index: 2;
+}
+
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.btn-primary {
+    color: #fff;
+    background: linear-gradient(180.2deg, #2C7B67 0.17%, #1D4B58 202.17%);
+    border-color: transparent;
+    border-radius: 5px;
+    padding: 12px;
+    transition: all 1.5s;
+}
+
+// .btn-primary:hover {
+//     color: #fff;
+//     background: linear-gradient(180.2deg, #1D4B58 0.17%, #2C7B67 202.17%);
+//     border-color: transparent;
+//     transition: all 1.5s;
+// }
+
+.img-holder {
+    display: flex;
+    justify-content: center;
+}
+
+.footer {
+    padding: 0px 0 15px;
+    position: static;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+
+}
+
+/***********************terms-condition**************************/
+.form-check-label {
+    color: var(--color-base) !important;
+    font-size: 18px;
+}
+
+.form-check-input {
+    margin-top: 6px;
+}
+
+.terms-condition .form-signin {
+
+    padding: 140px 15px;
+
+}
+
+.mb-custom {
+    margin-bottom: 160px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 1281px),
+only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 1281px),
+only screen and (-o-min-device-pixel-ratio: 1.25/1) and (min-width: 1281px),
+only screen and (min-device-pixel-ratio: 1.25) and (min-width: 1281px),
+only screen and (min-resolution: 200dpi) and (min-width: 1281px),
+only screen and (min-resolution: 1.25dppx) and (min-width: 1281px) {
+
+    .theme-footer {
+        position: static;
+        margin-top: 1px;
+    }
+
+    
+    .game-footer {
+        position: static;
+        margin-top: 50px;
+    }
+
+    .p-100 {
+        padding: 0 !important;
+    }
+
+    .baner-img {
+        height: 169px !important;
+    }
+
+    .logo {
+        padding: 39px 85px !important;
+    }
+  
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+    .theme-footer,
+    .game-footer {
+        position: static;
+        margin-top: 1px;
+    }
+
+    .pwd-eye {
+        position: absolute;
+        right: 15px;
+        top: 10px;
+    }
+
+    .baner-img {
+        height: 160px !important;
+    }
+
+    .p-bottom-mobile {
+        padding-bottom: 10px;
+    }
+
+    .card-img {
+        padding: 0 !important;
+    }
+
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .theme-footer,
+    .game-footer {
+        position: static;
+        margin-top: 1px;
+    }
+.pwd-eye {
+        position: absolute;
+        right: 15px;
+        top: 10px;
+    }
+    .baner-img {
+        height: 160px !important;
+    }
+
+    .p-bottom-mobile {
+        padding-bottom: 10px;
+    }
+
+    .card-img {
+        padding: 0 !important;
+    }
+
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 320px) and (max-width: 480px),
+only screen and (min--moz-device-pixel-ratio: 1.25) and (min-width: 320px) and (max-width: 480px),
+only screen and (-o-min-device-pixel-ratio: 1.25/1) and (min-width: 320px) and (max-width: 480px),
+only screen and (min-device-pixel-ratio: 1.25) and (min-width: 320px) and (max-width: 480px),
+only screen and (min-resolution: 200dpi) and (min-width: 320px) and (max-width: 480px),
+only screen and (min-resolution: 1.25dppx) and (min-width: 320px) and (max-width: 480px) {
+
+    .theme-footer,
+    .game-footer,
+    .footer {
+        position: static;
+        margin-top: 1px;
+    }
+
+    .p-bottom-mobile {
+        padding-bottom: 10px;
+    }
+    .pwd-eye {
+        position: absolute;
+        right: 15px;
+        top: 10px;
+    }
+}
+
+
+@media screen and (min-width:270px) and (max-width:767px) {
+ 
+   
+}
+
+@media screen and (min-width:767.1px) {
+    .mobile-view{
+        display:none;
+    }
+    
+    
+}
+
+.mobile-view{
+    background: #F8F7F2;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    .header{
+        height: 10vh;
+        width: 100%;
+        display: flex;
+        background: #342319;
+
+        img{
+            width: 95%;
+        }
+    }
+    .mobile-main-card{
+        height:90vh;
+        width: 100%;
+        background: url('https://coroebus.in/b2b-tgc/assets/ThemeBackground/TB-16790520298862.png?1188458101');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        overflow-y: scroll;
+        // align-items: flex-start !important;
+
+        //for new design
+        // .profile_card {
+        //   cursor: pointer;
+        //   position: relative;
+        //   width: 80%; //for new design only
+        //   height: 35vh;
+        //   background:#F7E2AC;
+        //   border: 3px solid #342319;
+        //   border-radius: 8px;
+        //   display: flex;
+        //   flex-direction: column;
+        //   // justify-content: center;
+        //   align-items: center;
+        //   margin: 4vh; //for  new design
+
+        //   hr{
+        //     width: 60vw !important; //for new design only
+        //   }
+        // }      
+        .sub-card{
+          height: 80vh; 
+          // height: 88vh; //for new design only
+          width: 100%;
+          padding: 0px;
+          // background:url("../../assets/trasparant.png"); //for new design only
+          // background-size: 100% 100%;  //for new design only
+          // background-repeat: no-repeat;//for new design only
+          // border-radius: 20px;//for new design only
+          // overflow-y: scroll; //for new design only
+          // margin: 1vh; ////for new design only
+        }
+        .card{
+            background: #F8F7F2;
+            box-shadow: 5px 5px 67px 5px rgba(0, 0, 0, 0.15);
+            border-radius: 23px;
+            height:40vh;
+            margin: 5px;
+            width: 80%;
+            .bg-img{
+                padding: 10px;
+                margin: 5px;
+                // background: #145F2D;
+                
+            }
+            img{
+                height: 20vh;
+                width: 20vh;
+                border-radius:100%; 
+                border: 2px solid #342319;         
+                 }
+            .card-body{
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                 justify-content: space-around;
+              h5{
+                text-align: center;
+              }
+              div{
+              a{
+                color: #FFFFFF;
+                font-size: 16px;
+                background-color: rgb(52 35 25);
+              }
+                text-align: center;
+              }
+            }
+            }
+        
+            .card:hover{
+                background-color: #DCAC26;
+            }
+    }
+
+}
+
+@media screen and (min-width:767.1px) and (max-width:1023.9px) and (orientation:portrait) {
+  .web-view{
+        display: none !important;
+       
+    }
+    .mobile-view{
+        display: none !important;
+        
+    }
+    .phone {
+        height: 70px;
+        width: 120px;
+        border: 3px solid white;
+        border-radius: 10px;
+        animation: rotate 1.5s ease-in-out infinite alternate;
+        /* display: none; */
+      }
+      
+      .message {
+        color: white;
+        font-size: 1.6em;
+        margin-top: 40px;
+        /* display: none; */
+      }
+      
+      @keyframes rotate {
+        0% {
+              transform: rotate(0deg)
+          }
+          50% {
+              transform: rotate(-90deg)
+          }
+          100% {
+              transform: rotate(-90deg)
+          }
+      }
+      
+     
+    //   @media only screen and  (min-width:767px) and (max-width:1024px) and(orientation:portrait){
+    //     .phone, .message {
+    //       display: block;
+    //     }
+    //   }
+  
+   
+    
+  }
+  .mobile-view-rotated{
+    // background: linear-gradient(var(--myvar));
+    
+    background-color: darkslategrey;;
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+  
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-position: center center;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  
+  @media screen  and (min-width:270px) and (max-width:767px){
+    .mobile-view-rotated{
+      display: none !important;
+    }
+    div.mat-expansion-panel-body {
+      padding: 0 24px 16px !important;
+    }
+    
+  }
+  @media screen and (min-width:1024px) {
+    .mobile-view-rotated{
+        display: none !important;
+    }
+  
+    
+  }
+
+  .mb-40 {
+    margin-bottom: 40px;
+  }
+/***************Responsive CSS*****************/
+@media screen and (max-width: 1700px) {
+    .logo {
+      padding: 65px 85px;
+    }
+  
+    .forgot-password {
+      text-align: end;
+      margin: 40px 0 85px 0;
+    }
+  
+    .img-holder img {
+      width: 55%;
+      margin-top: 30px;
+    }
+    .mb-86 {
+      margin-bottom: 35px;
+    }
+  
+  }
+  
+  @media screen and (max-width: 1400px) {
+  
+    .form-signin {
+  
+      max-width: 450px;
+  
+    }
+  
+    .form-signin h1 {
+      line-height: 38px;
+      font-size: 1.5rem;
+    }
+  
+    .mb-86 {
+      margin-bottom: 35px;
+    }
+  
+  
+    .form-floating>.form-control,
+    .form-floating>.form-select {
+      height: calc(2.5rem + 2px);
+      line-height: 1.25;
+    }
+  
+    .form-floating>label {
+  
+      padding: 0.5rem 0.75rem;
+      font-size: 14px;
+    }
+  
+    .forgot-password {
+      text-align: end;
+      margin: 25px 0 75px 0;
+    }
+  
+    .forgot-password a {
+      font-size: 14px;
+    }
+  
+    .btn-primary {
+      padding: 10px;
+      font-size: 16px;
+    }
+  
+  
+    .terms-condition .form-signin {
+      padding: 100px 15px;
+    }
+  
+    .mb-custom {
+      margin-bottom: 95px;
+    }
+  
+    .terms-condition .mb-5 {
+      margin-bottom: 2rem !important;
+    }
+  
+    .terms-condition .mt-5 {
+      margin-top: 2rem !important;
+    }
+  
+    .mt-100 {
+      margin-top: 60px !important;
+    }
+  
+    .form-select {
+      padding: 0.6rem 0.7rem;
+      font-size: 14px;
+    }
+  
+    .security .mb-40 {
+      margin-bottom: 25px;
+    }
+  
+    .security .form-signin {
+      padding: 120px 15px 30px;
+      position: relative;
+      z-index: 1;
+  
+    }
+  
+    .verify .form-signin {
+      padding: 150px 15px;
+    }
+  
+    .theme .p-100 {
+      padding: 65px;
+    }
+  
+    .card-wrapper {
+      padding: 0 0;
+    }
+  
+    .carousel-control-prev,
+    .carousel-control-next {
+  
+      height: 50px;
+      width: 50px;
+      left: 0px;
+  
+    }
+  
+    .carousel-control-next {
+      right: 0px !important;
+      left: auto !important;
+    }
+  }
+  
+  @media screen and (max-width: 1300px) {
+  
+  
+    .terms-condition .form-signin {
+      padding: 90px 15px 70px;
+    }
+  }
+  
+  @media screen and (max-width: 1100px) {
+    .form-signin h1 {
+      line-height: 32px;
+      font-size: 1.3rem;
+    }
+  
+    .form-signin {
+      padding: 0 35px;
+  
+    }
+    .eye{
+      position: absolute;
+      top: 8px;
+      right: 20px;
+    }
+  
+  }
+  
+  @media screen and (max-width: 768px) {
+    .xs-grid-none {
+      display: none;
+    }
+  
+    .xs-class {
+      width: 100%;
+    }
+  
+    .logo {
+      padding: 45px 0px 10px;
+      // margin-top: 45px;
+      text-align: center;
+      position: relative;
+    }
+  
+    .form-signin h1 {
+      line-height: 30px;
+      font-size: 1.2rem;
+    }
+  
+    .form-signin {
+      padding: 40px 10px;
+    }
+  
+    .verify .form-signin {
+      padding: 80px 15px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+  
+    .footer {
+      padding: 35px 0 15px;
+    }
+  }
+  
+  @media screen and (max-width: 740px) and (min-width: 550px) {
+    .footer {
+      display: none;
+    }
+  }
+  @media screen and (max-width:1200px) {
+  
+    .pwd-eye {
+    position: absolute;
+    top: 15px;
+    right:15px;
+    }
+  }

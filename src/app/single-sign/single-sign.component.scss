@@ -1,0 +1,413 @@
+.web-view{
+// background-color: #F8F7F2;
+height: 100vh;
+width: 100%;
+overflow: hidden;
+}
+.header{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    // background: #342319;
+}
+
+.logout_logo{
+  position: absolute;
+  /* width: 100%; */
+  right: 10px;
+  top: 50%;
+  transform: translate(0,-50%);
+}
+.main-card{
+    height: 90vh;
+    width: 100%;
+    padding: 0px;
+    // background: url('https://coroebus.in/b2b-tgc/assets/ThemeBackground/TB-16790520298862.png?1188458101');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    .sub-card{
+        height: 80vh;
+        width: 100%;
+        padding: 0px;
+        // background:url("../../assets/trasparant.png");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        border-radius: 20px;
+    }
+    .card{
+    background: #F8F7F2;
+    box-shadow: 5px 5px 67px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 23px;
+    height:40vh;
+    width: 20vw;
+    margin: 5px;
+    .bg-img{
+        padding: 10px;
+        margin: 5px;
+        // background: #145F2D;
+        
+    }
+    img{
+        height: 20vh;
+        width: 20vh;
+        border-radius:100%; 
+        border: 2px solid #342319;         
+
+    }
+    .card-body{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+         justify-content: space-around;
+      h5{
+        text-align: center;
+      }
+      div{
+      a{
+        color: #FFFFFF;
+        font-size: 16px;
+        background-color: rgb(52 35 25);
+      }
+        text-align: center;
+      }
+    }
+    }
+
+    .card:hover{
+        background-color: #DCAC26;
+    }
+}
+
+@media screen and (min-width:270px) and (max-width:767px) {
+    .web-view{
+        display:none;
+    }
+   
+}
+
+@media screen and (min-width:767.1px) {
+    .mobile-view{
+        display:none;
+    }
+    
+    
+}
+
+.mobile-view{
+    background: #F8F7F2;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    .header{
+        height: 10vh;
+        width: 100%;
+        display: flex;
+        background: #342319;
+
+        img{
+            width: 87%;
+        }
+    }
+    .mobile-main-card{
+        height:90vh;
+        width: 100%;
+        // background: url('https://coroebus.in/b2b-tgc/assets/ThemeBackground/TB-16790520298862.png?1188458101');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        overflow-y: scroll;
+        // align-items: flex-start !important;
+
+        //for new design
+        // .profile_card {
+        //   cursor: pointer;
+        //   position: relative;
+        //   width: 80%; //for new design only
+        //   height: 35vh;
+        //   background:#F7E2AC;
+        //   border: 3px solid #342319;
+        //   border-radius: 8px;
+        //   display: flex;
+        //   flex-direction: column;
+        //   // justify-content: center;
+        //   align-items: center;
+        //   margin: 4vh; //for  new design
+
+        //   hr{
+        //     width: 60vw !important; //for new design only
+        //   }
+        // }      
+        .sub-card{
+          // height: 80vh; 
+          height: 88vh; //for new design only
+          width: 100%;
+          padding: 0px;
+          // background:url("../../assets/theme/WarThememobile.png"); //for new design only
+          background-size: 100% 100%;  //for new design only
+          background-repeat: no-repeat;//for new design only
+          border-radius: 20px;//for new design only
+          overflow-y: scroll; //for new design only
+          margin: 1vh; ////for new design only
+        }
+        .card{
+            background: #F8F7F2;
+            box-shadow: 5px 5px 67px 5px rgba(0, 0, 0, 0.15);
+            border-radius: 23px;
+            height:40vh;
+            margin: 5px;
+            width: 80%;
+            .bg-img{
+                padding: 10px;
+                margin: 5px;
+                // background: #145F2D;
+                
+            }
+            img{
+                height: 20vh;
+                width: 20vh;
+                border-radius:100%; 
+                border: 2px solid #342319;         
+                 }
+            .card-body{
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                 justify-content: space-around;
+              h5{
+                text-align: center;
+              }
+              div{
+              a{
+                color: #FFFFFF;
+                font-size: 16px;
+                background-color: rgb(52 35 25);
+              }
+                text-align: center;
+              }
+            }
+            }
+        
+            .card:hover{
+                background-color: #DCAC26;
+            }
+    }
+
+}
+
+@media screen and (min-width:767.1px) and (max-width:1023.9px) and (orientation:portrait) {
+  .web-view{
+        display: none !important;
+       
+    }
+    .mobile-view{
+        display: none !important;
+        
+    }
+    .phone {
+        height: 70px;
+        width: 120px;
+        border: 3px solid white;
+        border-radius: 10px;
+        animation: rotate 1.5s ease-in-out infinite alternate;
+        /* display: none; */
+      }
+      
+      .message {
+        color: white;
+        font-size: 1.6em;
+        margin-top: 40px;
+        /* display: none; */
+      }
+      
+      @keyframes rotate {
+        0% {
+              transform: rotate(0deg)
+          }
+          50% {
+              transform: rotate(-90deg)
+          }
+          100% {
+              transform: rotate(-90deg)
+          }
+      }
+      
+     
+    //   @media only screen and  (min-width:767px) and (max-width:1024px) and(orientation:portrait){
+    //     .phone, .message {
+    //       display: block;
+    //     }
+    //   }
+  
+   
+    
+  }
+  .mobile-view-rotated{
+    // background: linear-gradient(var(--myvar));
+    
+    background-color: darkslategrey;;
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+  
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-position: center center;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  
+  @media screen  and (min-width:270px) and (max-width:767px){
+    .mobile-view-rotated{
+      display: none !important;
+    }
+    div.mat-expansion-panel-body {
+      padding: 0 24px 16px !important;
+    }
+    
+  }
+  @media screen and (min-width:1024px) {
+    .mobile-view-rotated{
+        display: none !important;
+    }
+  
+    
+  }
+
+
+
+//   new card design
+
+// .profile_card {
+//     cursor: pointer;
+//     position: relative;
+//     width: 20vw;
+//     height: 35vh;
+//     background:#F7E2AC;
+//     border: 3px solid #342319;
+//     border-radius: 8px;
+//     display: flex;
+//     flex-direction: column;
+//     // justify-content: center;
+//     align-items: center;
+
+//     .upper_section {
+//         width: 100%;
+//         height: 12vh;
+//         background: #342319;
+// //         border-bottom-left-radius: 100%;
+// // border-bottom-right-radius: 100%;
+
+
+//         .level_name {
+//             font-family: 'Roboto';
+//             font-style: normal;
+//             font-weight: 400;
+//             font-size: 2.2vh;
+//             line-height: 2.4vh;
+            
+//             text-align: center;
+//             letter-spacing: 0.2px;
+//             color: #FFFFFF;
+//             margin-top: 2vh;
+//         }
+//     }
+
+//     .profile_picture {
+//         position: absolute;
+//         border-radius: 50%;
+//         border: 3px solid  #342319;
+//         top: 4vh;
+//         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+//         .profile_picture_image {
+//             width: 12vh;
+//             height: 12vh;
+           
+//             border-radius: 100%;
+
+//         }
+
+
+//     }
+//     .camera_image {
+//         // position: absolute;
+//         // top: 0;
+//         // right: 1vw;
+//         // z-index: 10;
+//         // background: white;
+//         // padding: 6px;
+//         // width: 4vh;
+//         // height: 3vh;
+//         // /* margin: 3px; */
+//         // border-radius: 50%;
+
+//         .avatar-upload .avatar-edit input+label {
+//             display: inline-block;
+//             position: absolute;
+//             top: -46px;
+//             left: 17px;
+//             width: 3vh;
+//             height: 3vh;
+//             /* margin-bottom: 0; */
+//             border-radius: 50%;
+//             background: #FFFFFF;
+//             border: 1px solid transparent;
+//             box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+//             cursor: poInter;
+//             font-weight: normal;
+//             transition: all 0.2s ease-in-out;
+//             background-repeat: no-repeat;
+//             background-position: center;
+
+
+//         }
+//     }
+
+
+//     .lower_section {
+//         margin-top: 6vh;
+//         display: flex;
+//         flex-direction: column;
+//         align-items:center;
+//         justify-content: center;
+    
+//         .name_hos {
+//             font-family: 'Roboto';
+//             font-style: normal;
+//             font-weight: 400;
+//             font-size: 2.5vh;
+//             line-height: 2.4vh;
+//             white-space: nowrap;
+//             overflow: hidden;
+//             text-overflow: ellipsis;
+//             width:17ch;
+//             text-align:center;
+//             /* identical to box height, or 120% */
+         
+//             letter-spacing: 0.2px;
+//             color: #000000;
+//         }
+
+//        #btn{
+//         background: #342319 !important;
+//         border-radius: 10px;
+//         color: #FFFFFF !important;
+//         margin-top: 1.2vh;
+//         color: #FFFFFF;
+//         font-size: 16px;
+//         background: #342319;
+//         box-shadow: 0px 12px 16.196px rgba(0, 0, 0, 0.05);
+//         border-radius: 10px;
+//         a{
+//           color: #FFFFFF;
+//           font-size:14px;
+//           font-family: 'Roboto';
+//           font-style: normal;
+//           font-weight: 500;
+//         }
+//       }
+//     }
+
+
+// }
+

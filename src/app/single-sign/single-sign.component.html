@@ -1,0 +1,158 @@
+<div class="web-view">
+    <div class="header d-flex justify-content-center align-items-center" [style.backgroundColor]="headerColor" style="position: relative;">
+       <div class="logo d-flex">
+        <div *ngIf="this.userId=='Tata_aia';then tata else gop"></div>
+    
+        <ng-template #tata>
+          <img class="m-2 p-2"  src="https://coroebus.in/b2b-tgc/assets/GameLogo/1688024110_2532e44140e8ddcfa83b.png" height="100%" alt="">
+        </ng-template>
+        <ng-template #gop>
+          <img class="m-2 p-2" [src]="gameLogo" height="100%" alt="">
+        </ng-template>
+
+        <div class="logout_logo" >
+          <img src="assets/login/box-arrow-right.svg" (click)="logout()">
+         </div>
+       </div>
+    </div>
+    
+    <div class="main-card d-flex justify-content-center align-items-center" [style.backgroundImage]="mainCardbackgroundImageUrl">
+        <div class="row container sub-card d-flex justify-content-center align-items-center" 
+        style="height: 88vh;width: 100%;" [style.backgroundImage]="subCardbackgroundImageUrl">
+            <div class="col-4 p-0 d-flex justify-content-center" *ngFor="let item of gopdata">
+                <div class="card m-3 d-flex justify-content-center" style="width: 20vw;">
+                    <div class="bg-img d-flex justify-content-center">
+                        <img [src]="item.Image" class="card-img-top" alt=""  [style.borderColor]="headerColor">
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">{{item.role}}</h5>
+                      <div>
+                        <div>
+                          <a href="{{item.link}}" target="_blank" class="btn" [style.backgroundColor]="headerColor">View 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="ms-2 bi bi-eye" viewBox="0 0 16 16">
+                              <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                              <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                            </svg>
+                          </a>
+                         
+                        </div>
+                   
+                      </div> 
+                    </div>
+                  </div> 
+
+
+                  <!-- new profile card same as Gop -->
+                  <!-- <div class="profile_card">
+                    <div class="upper_section">
+                  </div>
+                    <div class="profile_picture">
+                        <img class="profile_picture_image" [src]="item.Image" alt="loading" height="100%" width="" />
+                    </div>
+
+                    <div class="lower_section">
+                        <div class="name_hos">
+                            {{item.role}}
+                        </div>
+                        <hr  style="color:black;width:16vw;opacity: 1.0;">
+                        <div class="name_hos" id="btn">
+                          <a href="{{item.link}}" target="_blank" class="btn">View 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="ms-2 bi bi-eye" viewBox="0 0 16 16">
+                              <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                              <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                            </svg>
+                          </a>
+                        </div>
+
+                    </div>
+
+                </div> -->
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="mobile-view">
+  <div class="header d-flex justify-content-center align-items-center" [style.backgroundColor]="headerColor" style="position: relative;">  
+     <div class="mobile-logo d-flex">
+      <div *ngIf="this.userId=='Tata_aia';then tata else gop"></div>
+      <ng-template #tata>
+        <img class="m-2 p-2"  src="https://coroebus.in/b2b-tgc/assets/GameLogo/1688024110_2532e44140e8ddcfa83b.png" height="100%" alt="">
+      </ng-template>
+      <ng-template #gop>
+        <img class="m-2 p-2" src="gamelogo" height="100%" alt="">
+      </ng-template>
+      <div class="d-flex justify-content-end logout_logo" >
+        <img src="assets/login/box-arrow-right.svg" (click)="logout()">
+       </div>
+     </div>
+       
+  </div>
+  <div class="mobile-main-card d-flex justify-content-center align-items-flex-start" [style.backgroundImage]="mainCardbackgroundImageUrl">
+      <div class="row container sub-card d-flex justify-content-center" [style.backgroundImage]="subCardbackgroundImageUrl">
+          <div class="col-12 p-0 d-flex justify-content-center" *ngFor="let item of gopdata">
+              <div class="card m-3 d-flex justify-content-center">
+                  <div class="bg-img d-flex justify-content-center">
+                      <img [src]="item.Image" class="card-img-top" alt="" [style.borderColor]="headerColor">
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">{{item.role}}</h5>
+                    <div>
+                      <div>
+                        <a href="{{item.link}}" target="_blank" class="btn" [style.backgroundColor]="headerColor">View 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="ms-2 bi bi-eye" viewBox="0 0 16 16">
+                            <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                            <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                          </svg>
+                        </a>
+                       
+                      </div>
+                 
+                    </div> 
+                  </div>
+                </div>
+
+                <!-- <div class="profile_card">
+                  <div class="upper_section">
+                </div>
+                  <div class="profile_picture">
+                      <img class="profile_picture_image" [src]="item.Image" alt="loading" height="100%" width="" />
+                  </div>
+
+                  <div class="lower_section">
+                      <div class="name_hos">
+                          {{item.role}}
+                      </div>
+                      <hr  style="color:black;width:16vw;opacity: 1.0;height: 3px;">
+                      <div class="" id="btn">
+                        <a href="{{item.link}}" target="_blank" class="btn">View 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="ms-2 bi bi-eye" viewBox="0 0 16 16">
+                            <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                            <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                          </svg>
+                        </a>
+                      </div>
+
+                  </div>
+
+              </div> -->
+
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+<!-- Rotated View -->
+<div class="mobile-view-rotated d-flex flex-column justify-content-center align-items-center">
+  <div class="phone">
+
+  </div>
+  <div class="message">
+    Please rotate your device!
+  </div>
+</div>

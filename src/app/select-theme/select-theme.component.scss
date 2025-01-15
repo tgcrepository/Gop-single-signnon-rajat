@@ -1,0 +1,104 @@
+.web-view {
+    // background-color: #F8F7F2;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background: #F8FAFB;
+}
+
+.header {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+}
+
+.selectThemeBackground {
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    background-image: url(../../assets/theme/Rectangle.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100% 100%;
+}
+
+.selectThemeText {
+    width: 100%;
+    font-family: 'Work Sans';
+    color: #FFF;
+    font-size: 2.5em;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.themeSlider{
+    height: 75vh;
+    width: 100%;
+    padding: 0% 10%;
+    position: relative;
+    top:17%;
+
+}
+
+.card {
+    height: 42vh;
+    width: 100%;
+    background-color: #fff;
+}
+
+.themelogo {
+    height: 25vh;
+    width: 25vh;
+}
+
+.carousel-item img {
+    /* Ensure images inside the items fill the entire width */
+    padding: 5%;
+}
+
+.Themebtn {
+    height: 5vh;
+    width: 70%;
+    border-radius: 3.826px;
+    border: 1px solid #2C7B67;
+    background-color: transparent;
+}
+.Themebtn:hover{
+    transition: transform 0.3s ease-in-out;
+    background-color: #2C7B67;
+    color: #FFF;
+}
+
+.arrowbackground {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4%;
+    border-radius: 100%;
+    background: linear-gradient(180deg, #2C7B67 0%, #1D4B58 100%);
+    
+}
+
+@media screen and (min-width:270px) and (max-width:767px) {
+    .web-view{
+        display:none;
+    }
+    .themeSlider {
+        height: 75vh;
+        width: 100%;
+        padding:15vh 0vh;
+        top:0;
+    }
+    .selectThemeText{
+        font-size: 2em;
+    }
+}
+@media screen and (min-width:767.1px) {
+    .mobile-view{
+        display:none;
+    }
+    
+    
+}
